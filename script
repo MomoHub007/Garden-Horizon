@@ -461,7 +461,7 @@ end)
 -- ==========================================
 local FarmTab = Window:Tab({Title = "Farming", Icon = "star"}) do
     FarmTab:Section({Title = "Auto Harvest Settings"})
-    FarmTab:Dropdown({ Title = "Ripeness Stage", Multi = true, List = {"Any", "Unripe", "Ripened", "Lush"}, Value = MoMoConfig.RipenessSelect, Callback = function(v) MoMoConfig.RipenessSelect = v CheckAndSave() end })
+    FarmTab:Dropdown({ Title = "Ripeness Stage", Multi = true, List = {"Any", "Unripe", "Ripe", "Lush"}, Value = MoMoConfig.RipenessSelect, Callback = function(v) MoMoConfig.RipenessSelect = v CheckAndSave() end })
     FarmTab:Dropdown({ Title = "Mutation Effect", Multi = true, List = {"Any", "None", "Chilled", "Flooded", "Foggy", "Frostbit", "Galactic", "Meteoric", "Misty", "Muddy", "Sandy", "Shocked", "Snowy", "Soaked", "Starstruck", "Stormy", "Tidal"}, Value = MoMoConfig.MutationSelect, Callback = function(v) MoMoConfig.MutationSelect = v CheckAndSave() end })
     FarmTab:Dropdown({ Title = "Variant Effect", Multi = true, List = {"Any", "None", "Gold", "Silver"}, Value = MoMoConfig.VariantSelect, Callback = function(v) MoMoConfig.VariantSelect = v CheckAndSave() end })
     FarmTab:Toggle({ Title = "Enable Auto Harvest", Desc = "Harvests plants automatically", Value = MoMoConfig.AutoHarvest, Callback = function(v)
